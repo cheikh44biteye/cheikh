@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cours particuliers de mathématiques à domicile partout à Dakar, de la 6e à la Terminale.">
+
+<title>Maths & Sciences | Cours particuliers de mathématiques</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #26364a;
+    line-height: 1.7;
+    background: white;
+}
+
+:root {
+    --blue: #1679b9;
+    --dark: #102b46;
+    --light: #eef6fc;
+    --gray: #637487;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+/* ACCUEIL */
+
+.hero {
+    background: linear-gradient(120deg, #102b46, #174d75);
+    color: white;
+    padding: 100px 8%;
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-tag {
+    color: #83d3ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #83d3ff;
+}
+
+.hero-text p {
+    color: #d8e7f3;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0e6098;
+    transform: translateY(-3px);
+}
+
+/* FORMULES MATHEMATIQUES */
+
+.math-visual {
+    min-height: 300px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.formula {
+    font-size: 30px;
+    color: #a9e1ff;
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.math-visual p {
+    color: #d8e7f3;
+    font-size: 14px;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 85px 8%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: var(--dark);
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: var(--gray);
+}
+
+/* PRESENTATION */
+
+.about {
+    background: #f5f9fc;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 25px;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+/* MATHEMATIQUES */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 35px 28px;
+    border: 1px solid #e4edf4;
+    border-radius: 12px;
+    transition: 0.3s;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(20,60,90,0.09);
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: var(--dark);
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.card p {
+    color: var(--gray);
+    font-size: 15px;
+}
+
+/* NIVEAUX */
+
+.levels {
+    background: var(--light);
+}
+
+.level-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    border-left: 4px solid var(--blue);
+}
+
+.level-card h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.level-card p {
+    color: var(--gray);
+}
+
+/* SERVICES */
+
+.services-list {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-item {
+    background: #f5f9fc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.service-item strong {
+    color: var(--dark);
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #d1e0ed;
+    margin-bottom: 15px;
+}
+
+.contact .btn {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b2034;
+    color: #c4d1df;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 200;
+    background: #20b96b;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .math-visual {
+        min-height: 220px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+    <a href="#accueil" class="logo">
+        Maths <span>&</span> Sciences
+    </a>
+
+    <div class="nav-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#presentation">Présentation</a>
+        <a href="#matieres">Cours</a>
+        <a href="#niveaux">Niveaux</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero" id="accueil">
+<div class="hero-container">
+
+    <div class="hero-text">
+        <div class="hero-tag">
+            COURS PARTICULIERS DE MATHÉMATIQUES · DAKAR
+        </div>
+
+        <h1>
+            Les mathématiques deviennent plus simples
+            quand on apprend à les
+            <span>comprendre.</span>
+        </h1>
+
+        <p>
+            Un accompagnement personnalisé en mathématiques,
+            du collège au lycée.
+        </p>
+
+        <a href="#matieres" class="btn">
+            Découvrir mes cours
+        </a>
+    </div>
+
+    <div class="math-visual">
+        <div class="formula">f(x) = ax² + bx + c</div>
+        <div class="formula">∫ f(x) dx</div>
+        <div class="formula">lim f(x)</div>
+
+        <p>
+            Comprendre, raisonner et progresser.
+        </p>
+    </div>
+
+</div>
+</section>
+<section class="section about" id="presentation">
+<div class="container">
+
+    <div class="section-title">
+        <h2>À propos de moi</h2>
+        <p>Un accompagnement fondé sur la compréhension.</p>
+    </div>
+
+    <div class="about-content">
+        <h3>Apprendre à raisonner plutôt qu'à mémoriser.</h3>
+
+        <p>
+            Je propose des cours particuliers de mathématiques
+            adaptés au niveau et aux difficultés de chaque élève.
+        </p>
+
+        <p>
+            Mon approche repose sur l'explication des notions
+            fondamentales, la méthode de résolution des exercices
+            et un accompagnement progressif.
+        </p>
+
+        <p>
+            L'objectif n'est pas seulement de trouver la bonne
+            réponse, mais aussi de comprendre le raisonnement
+            qui permet d'y parvenir.
+        </p>
+    </div>
+
+</div>
+</section>
+
+
+<section class="section" id="matieres">
+<div class="container">
+
+    <div class="section-title">
+        <h2>Les domaines étudiés</h2>
+        <p>Les mathématiques sous leurs différentes formes.</p>
+    </div>
+
+    <div class="cards">
+
+        <article class="card">
+            <div class="card-icon">📐</div>
+            <h3>Algèbre</h3>
+            <p>
+                Équations, inéquations, polynômes,
+                systèmes et calcul algébrique.
+            </p>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">📈</div>
+            <h3>Analyse</h3>
+            <p>
+                Fonctions, limites, continuité,
+                dérivées, primitives et intégrales.
+            </p>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">📏</div>
+            <h3>Géométrie</h3>
+            <p>
+                Géométrie plane, espace,
+                vecteurs et trigonométrie.
+            </p>
+        </article>
+
+    </div>
+
+</div>
+</section>
+
+<section class="section levels" id="niveaux">
+<div class="container">
+
+    <div class="section-title">
+        <h2>Les niveaux concernés</h2>
+        <p>Un suivi adapté à chaque parcours scolaire.</p>
+    </div>
+
+    <div class="cards">
+
+        <article class="level-card">
+            <h3>Collège</h3>
+            <p>
+                De la 6e à la 3e.
+                Consolidation des bases et préparation au BFEM.
+            </p>
+        </article>
+
+        <article class="level-card">
+            <h3>Lycée</h3>
+            <p>
+                Seconde, Première et Terminale.
+                Approfondissement et préparation au baccalauréat.
+            </p>
+        </article>
+
+    </div>
+
+</div>
+</section>
+
+<section class="section" id="services">
+<div class="container">
+
+    <div class="section-title">
+        <h2>Ma méthode de travail</h2>
+        <p>Un accompagnement organisé autour des besoins de l'élève.</p>
+    </div>
+
+    <div class="services-list">
+
+        <div class="service-item">
+            <strong>✓ Explications détaillées</strong>
+            <p>Comprendre les notions du cours.</p>
+        </div>
+
+        <div class="service-item">
+            <strong>✓ Exercices corrigés</strong>
+            <p>Appliquer les méthodes apprises.</p>
+        </div>
+
+        <div class="service-item">
+            <strong>✓ Suivi individuel</strong>
+            <p>Identifier les difficultés de l'élève.</p>
+        </div>
+
+        <div class="service-item">
+            <strong>✓ Préparation aux examens</strong>
+            <p>Se préparer efficacement aux épreuves.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section class="section contact" id="contact">
+<div class="container">
+
+    <h2>Commençons à progresser ensemble.</h2>
+
+    <p>
+        Vous recherchez un accompagnement
+        en mathématiques ?
+    </p>
+
+    <p>Cours à domicile partout à Dakar.</p>
+
+    <p>Téléphone : 78 312 36 58</p>
+
+    <a
+        href="https://wa.me/221783123658"
+        target="_blank"
+        rel="noopener"
+        class="btn">
+        Me contacter sur WhatsApp
+    </a>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Maths & Sciences. Tous droits réservés.</p>
+    <p>Cours particuliers de mathématiques · Dakar</p>
+</footer>
+
+<a
+    href="https://wa.me/221783123658"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp">
+    WhatsApp
+</a>
+
+</body>
+</html>
